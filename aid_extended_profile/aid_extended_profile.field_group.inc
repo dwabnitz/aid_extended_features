@@ -20,7 +20,7 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Administrative Metadata',
-    'weight' => '20',
+    'weight' => '22',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -43,7 +43,7 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Associated Content ',
-    'weight' => '19',
+    'weight' => '21',
     'children' => array(
       0 => 'field_profile_proj_cur_lead',
       1 => 'field_profile_proj_cur_member',
@@ -70,7 +70,7 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Classification',
-    'weight' => '17',
+    'weight' => '18',
     'children' => array(
       0 => 'field_profile_department',
       1 => 'field_profile_expertise',
@@ -98,7 +98,7 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '18',
+    'weight' => '19',
     'children' => array(
       0 => 'field_profile_social_media',
       1 => 'field_profile_urls',
@@ -125,10 +125,15 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Staff Information',
-    'weight' => '16',
+    'weight' => '17',
     'children' => array(
       0 => 'field_profile_staff_status',
       1 => 'field_profile_title_job',
+      2 => 'field_profile_gender',
+      3 => 'field_profile_internal_email',
+      4 => 'field_profile_staff_external',
+      5 => 'field_profile_staff_position',
+      6 => 'field_profile_staff_rec_no',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

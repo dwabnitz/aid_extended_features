@@ -74,7 +74,7 @@ function aid_extended_profile_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
@@ -731,7 +731,7 @@ function aid_extended_profile_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '15',
+        'weight' => '16',
       ),
     ),
   );
@@ -806,7 +806,7 @@ function aid_extended_profile_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '23',
       ),
     ),
   );
@@ -962,7 +962,7 @@ function aid_extended_profile_field_default_fields() {
           'size' => '30',
         ),
         'type' => 'text_textfield',
-        'weight' => '13',
+        'weight' => '22',
       ),
     ),
   );
