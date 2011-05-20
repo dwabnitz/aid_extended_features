@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AID Extended Project feature.
+ */
+
+include_once('aid_extended_project.features.inc');
