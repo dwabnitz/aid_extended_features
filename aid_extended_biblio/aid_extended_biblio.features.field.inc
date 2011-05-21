@@ -38,7 +38,7 @@ function aid_extended_biblio_field_default_fields() {
         'field_permissions' => array(
           'create' => 0,
           'edit' => 0,
-          'edit own' => 0,
+          'edit own' => 'edit own',
           'view' => 0,
           'view own' => 0,
         ),

@@ -24,9 +24,9 @@ function aid_extended_project_field_group_info() {
     'children' => array(
       0 => 'field_project_number',
       1 => 'field_project_type',
-      2 => 'field_project_mzes_recno',
+      2 => 'field_project_mzes_datart',
       3 => 'field_project_mzes_pro_num_altdb',
-      4 => 'field_project_mzes_datart',
+      4 => 'field_project_mzes_recno',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -80,14 +80,14 @@ function aid_extended_project_field_group_info() {
     'label' => 'Classification',
     'weight' => '7',
     'children' => array(
-      0 => 'field_project_department',
-      1 => 'field_project_funding',
-      2 => 'field_project_data_sources',
+      0 => 'field_project_data_sources',
+      1 => 'field_project_department',
+      2 => 'field_project_funding',
       3 => 'field_project_geo_areas',
       4 => 'field_project_research_areas',
-      5 => 'field_project_topics',
+      5 => 'field_project_research_programs',
       6 => 'field_project_tags',
-      7 => 'field_project_research_programs',
+      7 => 'field_project_topics',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -113,8 +113,8 @@ function aid_extended_project_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_project_directors',
-      1 => 'field_project_directors_previous',
-      2 => 'field_project_researchers',
+      1 => 'field_project_researchers',
+      2 => 'field_project_directors_previous',
       3 => 'field_project_researchers_prev',
     ),
     'format_type' => 'fieldset',
