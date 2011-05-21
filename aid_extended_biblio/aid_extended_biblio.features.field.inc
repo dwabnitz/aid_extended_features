@@ -400,7 +400,7 @@ function aid_extended_biblio_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '35',
+        'weight' => '15',
       ),
     ),
   );
@@ -488,7 +488,7 @@ function aid_extended_biblio_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '32',
+        'weight' => '12',
       ),
     ),
   );
@@ -576,7 +576,7 @@ function aid_extended_biblio_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '34',
+        'weight' => '14',
       ),
     ),
   );
@@ -665,7 +665,7 @@ function aid_extended_biblio_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '33',
+        'weight' => '13',
       ),
     ),
   );
@@ -1069,7 +1069,7 @@ function aid_extended_biblio_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '31',
+        'weight' => '11',
       ),
     ),
   );
@@ -1153,7 +1153,7 @@ function aid_extended_biblio_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '30',
+        'weight' => '10',
       ),
     ),
   );
@@ -1237,7 +1237,7 @@ function aid_extended_biblio_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '29',
+        'weight' => '9',
       ),
     ),
   );

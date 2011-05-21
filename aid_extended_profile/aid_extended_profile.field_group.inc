@@ -137,11 +137,13 @@ function aid_extended_profile_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Staff Information',
       'instance_settings' => array(
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_profile_staff|node|profile|form'] = $field_group;

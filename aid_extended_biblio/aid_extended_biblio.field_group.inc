@@ -23,9 +23,9 @@ function aid_extended_biblio_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_biblio_media_assets',
-      1 => 'field_biblio_related_nodes',
-      2 => 'field_biblio_related_publi',
-      3 => 'field_biblio_projects',
+      1 => 'field_biblio_projects',
+      2 => 'field_biblio_related_nodes',
+      3 => 'field_biblio_related_publi',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -50,13 +50,13 @@ function aid_extended_biblio_field_group_info() {
     'label' => 'Classification',
     'weight' => '2',
     'children' => array(
-      0 => 'field_biblio_tags',
-      1 => 'field_biblio_research_areas',
+      0 => 'field_biblio_data_sources',
+      1 => 'field_biblio_department',
       2 => 'field_biblio_geo_areas',
-      3 => 'field_biblio_topics',
-      4 => 'field_biblio_data_sources',
-      5 => 'field_biblio_department',
-      6 => 'field_biblio_research_programs',
+      3 => 'field_biblio_research_areas',
+      4 => 'field_biblio_research_programs',
+      5 => 'field_biblio_tags',
+      6 => 'field_biblio_topics',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -81,9 +81,9 @@ function aid_extended_biblio_field_group_info() {
     'label' => 'Links',
     'weight' => '3',
     'children' => array(
-      0 => 'field_biblio_url_fulltext',
-      1 => 'field_biblio_url_publisher',
-      2 => 'field_biblio_url_extras',
+      0 => 'field_biblio_url_extras',
+      1 => 'field_biblio_url_fulltext',
+      2 => 'field_biblio_url_publisher',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
