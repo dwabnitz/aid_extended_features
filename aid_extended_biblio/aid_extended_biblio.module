@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AID Extended Biblio feature.
+ */
+
+include_once('aid_extended_biblio.features.inc');
