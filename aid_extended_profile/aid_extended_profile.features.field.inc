@@ -37,7 +37,7 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter the author ID to link this profile explicitly to a certain biblio author. This is useful in cases, where a link via a user account does not exist.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -49,7 +49,31 @@ function aid_extended_profile_field_default_fields() {
             'thousand_separator' => ' ',
           ),
           'type' => 'number_integer',
-          'weight' => 39,
+          'weight' => '39',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => '39',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '39',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '37',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -123,14 +147,33 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Departments or parts of the organization the person belongs to.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 34,
+          'weight' => '34',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '34',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '35',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '33',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -141,7 +184,7 @@ function aid_extended_profile_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_profile_department',
-      'label' => 'Department',
+      'label' => 'Department of Staff',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -200,14 +243,33 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter the topics for which the staff member is known to be an expert.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 30,
+          'weight' => '30',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '30',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '29',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -218,18 +280,15 @@ function aid_extended_profile_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_profile_expertise',
-      'label' => 'Area of Expertise',
+      'label' => 'Expertise of Staff',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
+        'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'autocomplete_path' => 'taxonomy/autocomplete',
-          'size' => 60,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '16',
       ),
@@ -280,14 +339,33 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter the topics for which the staff member is available as an expert in the case of media inquiries.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 31,
+          'weight' => '31',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '31',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '30',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -298,7 +376,7 @@ function aid_extended_profile_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_profile_media_expertise',
-      'label' => 'Media Expertise',
+      'label' => 'Media Expertise of Staff',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -371,7 +449,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'node_reference',
           'settings' => array(),
           'type' => 'node_reference_default',
-          'weight' => 51,
+          'weight' => '51',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => '51',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '48',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '48',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -434,6 +531,11 @@ function aid_extended_profile_field_default_fields() {
         'referenceable_types' => array(
           'biblio' => 0,
           'book' => 0,
+          'event' => 0,
+          'media_coverage' => 0,
+          'news_item' => 0,
+          'page' => 0,
+          'press_release' => 0,
           'profile' => 0,
           'project' => 'project',
           'research_program' => 0,
@@ -452,14 +554,33 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter the current projects the person plays a role in as a researcher.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'node_reference',
           'settings' => array(),
           'type' => 'node_reference_default',
-          'weight' => 50,
+          'weight' => '50',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => '50',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '47',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '47',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -522,6 +643,11 @@ function aid_extended_profile_field_default_fields() {
         'referenceable_types' => array(
           'biblio' => 0,
           'book' => 'book',
+          'event' => 'event',
+          'media_coverage' => 'media_coverage',
+          'news_item' => 'news_item',
+          'page' => 'page',
+          'press_release' => 'press_release',
           'profile' => 0,
           'project' => 0,
           'research_program' => 'research_program',
@@ -547,7 +673,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'node_reference',
           'settings' => array(),
           'type' => 'node_reference_default',
-          'weight' => 48,
+          'weight' => '48',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => '48',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '45',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '45',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -558,7 +703,7 @@ function aid_extended_profile_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_profile_related_nodes',
-      'label' => 'Related Content',
+      'label' => 'Content Related to Profile',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -623,7 +768,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'default',
-          'weight' => 26,
+          'weight' => '26',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'default',
+          'weight' => '26',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '31',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '26',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -708,7 +872,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 14,
+          'weight' => '14',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '14',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '24',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -785,7 +968,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 33,
+          'weight' => '33',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '33',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '34',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '32',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -855,14 +1057,33 @@ function aid_extended_profile_field_default_fields() {
       'bundle' => 'profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter some keywords describing the person or organization.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 32,
+          'weight' => '32',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '32',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '33',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '31',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -873,7 +1094,7 @@ function aid_extended_profile_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_profile_tags',
-      'label' => 'Tags',
+      'label' => 'Staff Keywords',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -883,7 +1104,6 @@ function aid_extended_profile_field_default_fields() {
         'module' => 'taxonomy',
         'settings' => array(
           'autocomplete_path' => 'taxonomy/autocomplete',
-          'content_taxonomy_autocomplete_new_terms' => 'allow',
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
@@ -938,7 +1158,27 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 28,
+          'weight' => '28',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '28',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '32',
+        ),
+        'profile_reference' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1013,7 +1253,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'default',
-          'weight' => 49,
+          'weight' => '49',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'default',
+          'weight' => '49',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '46',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '46',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1097,7 +1356,26 @@ function aid_extended_profile_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'default',
-          'weight' => 8,
+          'weight' => '8',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'default',
+          'weight' => '8',
+        ),
+        'profile_panel_detail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '22',
+        ),
+        'profile_reference' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1137,21 +1415,27 @@ function aid_extended_profile_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Area of Expertise');
   t('Associated Biblio AuthorID');
-  t('Department');
+  t('Content Related to Profile');
+  t('Department of Staff');
+  t('Departments or parts of the organization the person belongs to.');
   t('Director of Current Projects');
   t('Enter links to your social media pages, such as your Facbook profile, your Twitter account,  your LinkedIn profile, or personal website.');
+  t('Enter some keywords describing the person or organization.');
+  t('Enter the author ID to link this profile explicitly to a certain biblio author. This is useful in cases, where a link via a user account does not exist.');
+  t('Enter the current projects the person plays a role in as a researcher.');
+  t('Enter the topics for which the staff member is available as an expert in the case of media inquiries.');
+  t('Enter the topics for which the staff member is known to be an expert.');
+  t('Expertise of Staff');
   t('Job Title');
-  t('Media Expertise');
+  t('Media Expertise of Staff');
   t('Other Weblinks');
   t('Personal Website');
-  t('Related Content');
   t('Researcher in Current Projects');
   t('Social Media');
+  t('Staff Keywords');
   t('Staff Member');
   t('Status');
-  t('Tags');
   t('This is used to indicate whether this is a staff member. This is helpful when creating lists of profiles for staff directories, while excluding special cases such as guests or organizations.');
 
   return $fields;
