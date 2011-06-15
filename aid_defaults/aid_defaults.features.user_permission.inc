@@ -114,18 +114,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'overlay',
   );
 
-  // Exported permission: access printer-friendly version
-  $permissions['access printer-friendly version'] = array(
-    'name' => 'access printer-friendly version',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'staff',
-      3 => 'web editor',
-    ),
-    'module' => 'book',
-  );
-
   // Exported permission: access site in maintenance mode
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
@@ -167,17 +155,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: add content to books
-  $permissions['add content to books'] = array(
-    'name' => 'add content to books',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'web editor',
-    ),
-    'module' => 'book',
-  );
-
   // Exported permission: add media from remote sources
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
@@ -208,15 +185,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'addthis',
   );
 
-  // Exported permission: administer advanced pane settings
-  $permissions['administer advanced pane settings'] = array(
-    'name' => 'administer advanced pane settings',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
   // Exported permission: administer biblio
   $permissions['administer biblio'] = array(
     'name' => 'administer biblio',
@@ -233,15 +201,6 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'block',
-  );
-
-  // Exported permission: administer book outlines
-  $permissions['administer book outlines'] = array(
-    'name' => 'administer book outlines',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'book',
   );
 
   // Exported permission: administer comments
@@ -261,15 +220,6 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: administer ctools access ruleset
-  $permissions['administer ctools access ruleset'] = array(
-    'name' => 'administer ctools access ruleset',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ctools_access_ruleset',
   );
 
   // Exported permission: administer features
@@ -345,33 +295,6 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: administer page manager
-  $permissions['administer page manager'] = array(
-    'name' => 'administer page manager',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'page_manager',
-  );
-
-  // Exported permission: administer pane access
-  $permissions['administer pane access'] = array(
-    'name' => 'administer pane access',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
-  // Exported permission: administer panels layouts
-  $permissions['administer panels layouts'] = array(
-    'name' => 'administer panels layouts',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
   );
 
   // Exported permission: administer pathauto
@@ -531,16 +454,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create book content
-  $permissions['create book content'] = array(
-    'name' => 'create book content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create event content
   $permissions['create event content'] = array(
     'name' => 'create event content',
@@ -548,6 +461,16 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'web editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create featured_content content
+  $permissions['create featured_content content'] = array(
+    'name' => 'create featured_content content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'web editor',
     ),
     'module' => 'node',
   );
@@ -560,16 +483,6 @@ function aid_defaults_user_default_permissions() {
       1 => 'web editor',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: create new books
-  $permissions['create new books'] = array(
-    'name' => 'create new books',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'book',
   );
 
   // Exported permission: create news_item content
@@ -622,26 +535,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create research_program content
-  $permissions['create research_program content'] = array(
-    'name' => 'create research_program content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: create research_program_section content
-  $permissions['create research_program_section content'] = array(
-    'name' => 'create research_program_section content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create url aliases
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -671,18 +564,18 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any book content
-  $permissions['delete any book content'] = array(
-    'name' => 'delete any book content',
+  // Exported permission: delete any event content
+  $permissions['delete any event content'] = array(
+    'name' => 'delete any event content',
     'roles' => array(
       0 => 'administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete any event content
-  $permissions['delete any event content'] = array(
-    'name' => 'delete any event content',
+  // Exported permission: delete any featured_content content
+  $permissions['delete any featured_content content'] = array(
+    'name' => 'delete any featured_content content',
     'roles' => array(
       0 => 'administrator',
     ),
@@ -743,24 +636,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any research_program content
-  $permissions['delete any research_program content'] = array(
-    'name' => 'delete any research_program content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any research_program_section content
-  $permissions['delete any research_program_section content'] = array(
-    'name' => 'delete any research_program_section content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own biblio content
   $permissions['delete own biblio content'] = array(
     'name' => 'delete own biblio content',
@@ -771,18 +646,18 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own book content
-  $permissions['delete own book content'] = array(
-    'name' => 'delete own book content',
+  // Exported permission: delete own event content
+  $permissions['delete own event content'] = array(
+    'name' => 'delete own event content',
     'roles' => array(
       0 => 'administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete own event content
-  $permissions['delete own event content'] = array(
-    'name' => 'delete own event content',
+  // Exported permission: delete own featured_content content
+  $permissions['delete own featured_content content'] = array(
+    'name' => 'delete own featured_content content',
     'roles' => array(
       0 => 'administrator',
     ),
@@ -843,24 +718,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own research_program content
-  $permissions['delete own research_program content'] = array(
-    'name' => 'delete own research_program content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own research_program_section content
-  $permissions['delete own research_program_section content'] = array(
-    'name' => 'delete own research_program_section content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete revisions
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
@@ -910,9 +767,19 @@ function aid_defaults_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in data_type
-  $permissions['delete terms in data_type'] = array(
-    'name' => 'delete terms in data_type',
+  // Exported permission: delete terms in data_types
+  $permissions['delete terms in data_types'] = array(
+    'name' => 'delete terms in data_types',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'web editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in event_categories
+  $permissions['delete terms in event_categories'] = array(
+    'name' => 'delete terms in event_categories',
     'roles' => array(
       0 => 'administrator',
       1 => 'web editor',
@@ -930,9 +797,9 @@ function aid_defaults_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in funding_type
-  $permissions['delete terms in funding_type'] = array(
-    'name' => 'delete terms in funding_type',
+  // Exported permission: delete terms in funding_types
+  $permissions['delete terms in funding_types'] = array(
+    'name' => 'delete terms in funding_types',
     'roles' => array(
       0 => 'administrator',
       1 => 'web editor',
@@ -953,6 +820,16 @@ function aid_defaults_user_default_permissions() {
   // Exported permission: delete terms in geographical_areas
   $permissions['delete terms in geographical_areas'] = array(
     'name' => 'delete terms in geographical_areas',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'web editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in news_categories
+  $permissions['delete terms in news_categories'] = array(
+    'name' => 'delete terms in news_categories',
     'roles' => array(
       0 => 'administrator',
       1 => 'web editor',
@@ -1050,16 +927,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any book content
-  $permissions['edit any book content'] = array(
-    'name' => 'edit any book content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit any event content
   $permissions['edit any event content'] = array(
     'name' => 'edit any event content',
@@ -1067,6 +934,16 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'web editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any featured_content content
+  $permissions['edit any featured_content content'] = array(
+    'name' => 'edit any featured_content content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'web editor',
     ),
     'module' => 'node',
   );
@@ -1133,26 +1010,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any research_program content
-  $permissions['edit any research_program content'] = array(
-    'name' => 'edit any research_program content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit any research_program_section content
-  $permissions['edit any research_program_section content'] = array(
-    'name' => 'edit any research_program_section content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit biblio authors
   $permissions['edit biblio authors'] = array(
     'name' => 'edit biblio authors',
@@ -1198,16 +1055,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own book content
-  $permissions['edit own book content'] = array(
-    'name' => 'edit own book content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit own comments
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
@@ -1227,6 +1074,16 @@ function aid_defaults_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'web editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own featured_content content
+  $permissions['edit own featured_content content'] = array(
+    'name' => 'edit own featured_content content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'web editor',
     ),
     'module' => 'node',
   );
@@ -1293,26 +1150,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own research_program content
-  $permissions['edit own research_program content'] = array(
-    'name' => 'edit own research_program content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own research_program_section content
-  $permissions['edit own research_program_section content'] = array(
-    'name' => 'edit own research_program_section content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit terms in data_collections
   $permissions['edit terms in data_collections'] = array(
     'name' => 'edit terms in data_collections',
@@ -1357,9 +1194,20 @@ function aid_defaults_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in data_type
-  $permissions['edit terms in data_type'] = array(
-    'name' => 'edit terms in data_type',
+  // Exported permission: edit terms in data_types
+  $permissions['edit terms in data_types'] = array(
+    'name' => 'edit terms in data_types',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'web editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in event_categories
+  $permissions['edit terms in event_categories'] = array(
+    'name' => 'edit terms in event_categories',
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
@@ -1379,9 +1227,9 @@ function aid_defaults_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in funding_type
-  $permissions['edit terms in funding_type'] = array(
-    'name' => 'edit terms in funding_type',
+  // Exported permission: edit terms in funding_types
+  $permissions['edit terms in funding_types'] = array(
+    'name' => 'edit terms in funding_types',
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
@@ -1404,6 +1252,17 @@ function aid_defaults_user_default_permissions() {
   // Exported permission: edit terms in geographical_areas
   $permissions['edit terms in geographical_areas'] = array(
     'name' => 'edit terms in geographical_areas',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'web editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in news_categories
+  $permissions['edit terms in news_categories'] = array(
+    'name' => 'edit terms in news_categories',
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
@@ -1584,39 +1443,6 @@ function aid_defaults_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: show book reorder tab
-  $permissions['show book reorder tab'] = array(
-    'name' => 'show book reorder tab',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'web editor',
-    ),
-    'module' => 'book_made_simple',
-  );
-
-  // Exported permission: show core Outline form element
-  $permissions['show core Outline form element'] = array(
-    'name' => 'show core Outline form element',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'web editor',
-    ),
-    'module' => 'book_made_simple',
-  );
-
-  // Exported permission: show core Outline tab
-  $permissions['show core Outline tab'] = array(
-    'name' => 'show core Outline tab',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'web editor',
-    ),
-    'module' => 'book_made_simple',
-  );
-
   // Exported permission: show download links
   $permissions['show download links'] = array(
     'name' => 'show download links',
@@ -1703,43 +1529,6 @@ function aid_defaults_user_default_permissions() {
       3 => 'web editor',
     ),
     'module' => 'search',
-  );
-
-  // Exported permission: use page manager
-  $permissions['use page manager'] = array(
-    'name' => 'use page manager',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'page_manager',
-  );
-
-  // Exported permission: use panels caching features
-  $permissions['use panels caching features'] = array(
-    'name' => 'use panels caching features',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
-  // Exported permission: use panels dashboard
-  $permissions['use panels dashboard'] = array(
-    'name' => 'use panels dashboard',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
-  );
-
-  // Exported permission: use panels in place editing
-  $permissions['use panels in place editing'] = array(
-    'name' => 'use panels in place editing',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'web editor',
-    ),
-    'module' => 'panels',
   );
 
   // Exported permission: use text format filtered_html
@@ -1855,15 +1644,6 @@ function aid_defaults_user_default_permissions() {
       3 => 'web editor',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: view pane admin links
-  $permissions['view pane admin links'] = array(
-    'name' => 'view pane admin links',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels',
   );
 
   // Exported permission: view post access counter

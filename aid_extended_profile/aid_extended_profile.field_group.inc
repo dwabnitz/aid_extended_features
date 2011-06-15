@@ -20,7 +20,7 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Administrative Metadata',
-    'weight' => '22',
+    'weight' => '21',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -43,11 +43,9 @@ function aid_extended_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Associated Content ',
-    'weight' => '21',
+    'weight' => '20',
     'children' => array(
-      0 => 'field_profile_proj_cur_lead',
-      1 => 'field_profile_proj_cur_member',
-      2 => 'field_profile_related_nodes',
+      0 => 'field_profile_related_nodes',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -76,6 +74,8 @@ function aid_extended_profile_field_group_info() {
       1 => 'field_profile_expertise',
       2 => 'field_profile_media_expertise',
       3 => 'field_profile_tags',
+      4 => 'field_profile_research_areas',
+      5 => 'field_profile_research_programs',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

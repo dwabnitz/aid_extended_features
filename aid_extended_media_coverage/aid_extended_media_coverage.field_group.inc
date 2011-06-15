@@ -51,9 +51,11 @@ function aid_extended_media_coverage_field_group_info() {
     'label' => 'Classification',
     'weight' => '7',
     'children' => array(
-      0 => 'field_media_coverage_tags',
-      1 => 'field_media_coverage_topics',
-      2 => 'field_media_coverage_department',
+      0 => 'field_media_coverage_department',
+      1 => 'field_media_coverage_tags',
+      2 => 'field_media_coverage_topics',
+      3 => 'field_media_coverage_res_area',
+      4 => 'field_media_coverage_category',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -26,8 +26,11 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = 0;
+  $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = 1;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -37,6 +40,7 @@ function aid_extended_profile_views_default_views() {
     'field_profile_first_name' => 'field_profile_first_name',
   );
   $handler->display->display_options['row_options']['hide_empty'] = 1;
+  $handler->display->display_options['row_options']['default_field_elements'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -48,11 +52,12 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['title']['alter']['external'] = 0;
   $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 1;
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
@@ -69,11 +74,12 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_profile_first_name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_profile_first_name']['alter']['trim_whitespace'] = 1;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_profile_first_name']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_profile_first_name']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_profile_first_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_first_name']['element_default_classes'] = 1;
@@ -90,32 +96,27 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_last_name']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_profile_last_name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['field_api_classes'] = 0;
-  /* Sort criterion: Fields: Last Name (field_profile_last_name) - value */
+  /* Sort criterion: Content: Last Name (field_profile_last_name) */
   $handler->display->display_options['sorts']['field_profile_last_name_value']['id'] = 'field_profile_last_name_value';
   $handler->display->display_options['sorts']['field_profile_last_name_value']['table'] = 'field_data_field_profile_last_name';
   $handler->display->display_options['sorts']['field_profile_last_name_value']['field'] = 'field_profile_last_name_value';
-  /* Filter criterion: Fields: Staff Member (field_profile_staff) */
-  $handler->display->display_options['filters']['field_profile_staff_value']['id'] = 'field_profile_staff_value';
-  $handler->display->display_options['filters']['field_profile_staff_value']['table'] = 'field_data_field_profile_staff';
-  $handler->display->display_options['filters']['field_profile_staff_value']['field'] = 'field_profile_staff_value';
-  $handler->display->display_options['filters']['field_profile_staff_value']['value'] = array(
-    1 => '1',
-  );
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 0;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -123,6 +124,15 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'profile' => 'profile',
   );
+  $handler->display->display_options['filters']['type']['group'] = 0;
+  /* Filter criterion: Content: Staff Member (field_profile_staff) */
+  $handler->display->display_options['filters']['field_profile_staff_value']['id'] = 'field_profile_staff_value';
+  $handler->display->display_options['filters']['field_profile_staff_value']['table'] = 'field_data_field_profile_staff';
+  $handler->display->display_options['filters']['field_profile_staff_value']['field'] = 'field_profile_staff_value';
+  $handler->display->display_options['filters']['field_profile_staff_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_profile_staff_value']['group'] = 0;
 
   /* Display: Staff Directory */
   $handler = $view->new_display('page', 'Staff Directory', 'staff_directory_page');
@@ -168,6 +178,7 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -180,11 +191,12 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['title']['alter']['external'] = 0;
   $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
@@ -203,12 +215,13 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['absolute'] = 1;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim_whitespace'] = 1;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['max_length'] = '0';
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['word_boundary'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['ellipsis'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['element_label_colon'] = 0;
   $handler->display->display_options['fields']['field_profile_last_name']['element_default_classes'] = 1;
@@ -219,22 +232,23 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['field_profile_phone']['id'] = 'field_profile_phone';
   $handler->display->display_options['fields']['field_profile_phone']['table'] = 'field_data_field_profile_phone';
   $handler->display->display_options['fields']['field_profile_phone']['field'] = 'field_profile_phone';
-  /* Field: Content: Office */
+  /* Field: Content: Visitor Address */
   $handler->display->display_options['fields']['field_profile_visitor_address']['id'] = 'field_profile_visitor_address';
   $handler->display->display_options['fields']['field_profile_visitor_address']['table'] = 'field_data_field_profile_visitor_address';
   $handler->display->display_options['fields']['field_profile_visitor_address']['field'] = 'field_profile_visitor_address';
   $handler->display->display_options['fields']['field_profile_visitor_address']['label'] = 'Room';
-  $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['text'] = '[field_profile_visitor_address-sub_premise]';
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_profile_visitor_address']['element_label_colon'] = 1;
   $handler->display->display_options['fields']['field_profile_visitor_address']['element_default_classes'] = 1;
@@ -243,7 +257,7 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['fields']['field_profile_visitor_address']['click_sort_column'] = 'country';
   $handler->display->display_options['fields']['field_profile_visitor_address']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Fields: Last Name (field_profile_last_name) - value */
+  /* Contextual filter: Content: Last Name (field_profile_last_name) */
   $handler->display->display_options['arguments']['field_profile_last_name_value']['id'] = 'field_profile_last_name_value';
   $handler->display->display_options['arguments']['field_profile_last_name_value']['table'] = 'field_data_field_profile_last_name';
   $handler->display->display_options['arguments']['field_profile_last_name_value']['field'] = 'field_profile_last_name_value';
@@ -265,6 +279,7 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 0;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -272,44 +287,93 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'profile' => 'profile',
   );
-  /* Filter criterion: Fields: Staff Member (field_profile_staff) */
+  $handler->display->display_options['filters']['type']['group'] = 0;
+  /* Filter criterion: Content: Staff Member (field_profile_staff) */
   $handler->display->display_options['filters']['field_profile_staff_value']['id'] = 'field_profile_staff_value';
   $handler->display->display_options['filters']['field_profile_staff_value']['table'] = 'field_data_field_profile_staff';
   $handler->display->display_options['filters']['field_profile_staff_value']['field'] = 'field_profile_staff_value';
   $handler->display->display_options['filters']['field_profile_staff_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Fields: Expertise of Staff (field_profile_expertise) - tid */
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['id'] = 'field_profile_expertise_tid';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['table'] = 'field_data_field_profile_expertise';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['field'] = 'field_profile_expertise_tid';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['operator'] = 'or';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['operator_id'] = 'field_profile_expertise_tid_op';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['label'] = 'Area of Expertise';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['operator'] = 'field_profile_expertise_tid_op';
-  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['identifier'] = 'field_profile_expertise_tid';
-  /* Filter criterion: Fields: Department of Staff (field_profile_department) - tid */
+  $handler->display->display_options['filters']['field_profile_staff_value']['group'] = 0;
+  /* Filter criterion: Content: Department of Staff (field_profile_department) */
   $handler->display->display_options['filters']['field_profile_department_tid']['id'] = 'field_profile_department_tid';
   $handler->display->display_options['filters']['field_profile_department_tid']['table'] = 'field_data_field_profile_department';
   $handler->display->display_options['filters']['field_profile_department_tid']['field'] = 'field_profile_department_tid';
-  $handler->display->display_options['filters']['field_profile_department_tid']['operator'] = 'or';
+  $handler->display->display_options['filters']['field_profile_department_tid']['value'] = array(
+    16 => '16',
+    15 => '15',
+    13 => '13',
+    11 => '11',
+    12 => '12',
+    3 => '3',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+    14 => '14',
+    7 => '7',
+    8 => '8',
+    9 => '9',
+    10 => '10',
+  );
+  $handler->display->display_options['filters']['field_profile_department_tid']['group'] = 0;
   $handler->display->display_options['filters']['field_profile_department_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_department_tid']['expose']['operator_id'] = 'field_profile_department_tid_op';
   $handler->display->display_options['filters']['field_profile_department_tid']['expose']['label'] = 'Department';
   $handler->display->display_options['filters']['field_profile_department_tid']['expose']['operator'] = 'field_profile_department_tid_op';
   $handler->display->display_options['filters']['field_profile_department_tid']['expose']['identifier'] = 'field_profile_department_tid';
-  /* Filter criterion: Fields: Position (field_profile_staff_position) */
+  $handler->display->display_options['filters']['field_profile_department_tid']['expose']['remember'] = 1;
+  $handler->display->display_options['filters']['field_profile_department_tid']['expose']['reduce'] = 1;
+  $handler->display->display_options['filters']['field_profile_department_tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['field_profile_department_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_profile_department_tid']['vocabulary'] = 'org_structure';
+  $handler->display->display_options['filters']['field_profile_department_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_profile_department_tid']['error_message'] = 1;
+  /* Filter criterion: Content: Position (field_profile_staff_position) */
   $handler->display->display_options['filters']['field_profile_staff_position_value']['id'] = 'field_profile_staff_position_value';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['table'] = 'field_data_field_profile_staff_position';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['field'] = 'field_profile_staff_position_value';
+  $handler->display->display_options['filters']['field_profile_staff_position_value']['value'] = array(
+    'all' => 'all',
+    1 => '1',
+    2 => '2',
+    3 => '3',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+    7 => '7',
+    8 => '8',
+    9 => '9',
+    10 => '10',
+    12 => '12',
+    20 => '20',
+    30 => '30',
+  );
+  $handler->display->display_options['filters']['field_profile_staff_position_value']['group'] = 0;
   $handler->display->display_options['filters']['field_profile_staff_position_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['operator_id'] = 'field_profile_staff_position_value_op';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['label'] = 'Position';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['operator'] = 'field_profile_staff_position_value_op';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['identifier'] = 'field_profile_staff_position_value';
-  $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['reduce'] = 0;
-  /* Filter criterion: Fields: Status (field_profile_staff_status) */
+  $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['remember'] = 1;
+  $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['reduce'] = 1;
+  /* Filter criterion: Content: Expertise of Staff (field_profile_expertise) */
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['id'] = 'field_profile_expertise_tid';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['table'] = 'field_data_field_profile_expertise';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['field'] = 'field_profile_expertise_tid';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['group'] = 0;
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['operator_id'] = 'field_profile_expertise_tid_op';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['label'] = 'Area of Expertise';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['operator'] = 'field_profile_expertise_tid_op';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['identifier'] = 'field_profile_expertise_tid';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['expose']['reduce'] = 0;
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['vocabulary'] = 'topics';
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_profile_expertise_tid']['error_message'] = 1;
+  /* Filter criterion: Content: Status (field_profile_staff_status) */
   $handler->display->display_options['filters']['field_profile_staff_status_value']['id'] = 'field_profile_staff_status_value';
   $handler->display->display_options['filters']['field_profile_staff_status_value']['table'] = 'field_data_field_profile_staff_status';
   $handler->display->display_options['filters']['field_profile_staff_status_value']['field'] = 'field_profile_staff_status_value';
@@ -317,6 +381,7 @@ function aid_extended_profile_views_default_views() {
     1 => '1',
     3 => '3',
   );
+  $handler->display->display_options['filters']['field_profile_staff_status_value']['group'] = 0;
   $handler->display->display_options['filters']['field_profile_staff_status_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_staff_status_value']['expose']['operator_id'] = 'field_profile_staff_status_value_op';
   $handler->display->display_options['filters']['field_profile_staff_status_value']['expose']['label'] = 'Status';
@@ -325,7 +390,6 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['field_profile_staff_status_value']['expose']['required'] = 1;
   $handler->display->display_options['filters']['field_profile_staff_status_value']['expose']['reduce'] = 1;
   $handler->display->display_options['path'] = 'staff-directory';
-  $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'People';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -335,8 +399,31 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['display_description'] = 'Provides an A-Z index for staff directory page.';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Last Name */
+  $handler->display->display_options['fields']['field_profile_last_name']['id'] = 'field_profile_last_name';
+  $handler->display->display_options['fields']['field_profile_last_name']['table'] = 'field_data_field_profile_last_name';
+  $handler->display->display_options['fields']['field_profile_last_name']['field'] = 'field_profile_last_name';
+  $handler->display->display_options['fields']['field_profile_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_last_name']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_profile_last_name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_profile_last_name']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Fields: Last Name (field_profile_last_name) - value */
+  /* Contextual filter: Content: Last Name (field_profile_last_name) */
   $handler->display->display_options['arguments']['field_profile_last_name_value']['id'] = 'field_profile_last_name_value';
   $handler->display->display_options['arguments']['field_profile_last_name_value']['table'] = 'field_data_field_profile_last_name';
   $handler->display->display_options['arguments']['field_profile_last_name_value']['field'] = 'field_profile_last_name_value';
@@ -360,34 +447,7 @@ function aid_extended_profile_views_default_views() {
     'default' => 0,
   );
   $handler->display->display_options['inherit_arguments'] = 0;
-  $translatables['profiles'] = array(
-    t('Master'),
-    t('Staff Directory'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('[field_profile_last_name]'),
-    t('Provides a staff directory page.'),
-    t('Name'),
-    t('[title]'),
-    t('[path]'),
-    t('Phone'),
-    t('Room'),
-    t('[field_profile_visitor_address-sub_premise]'),
-    t('All'),
-    t('Area of Expertise'),
-    t('Department'),
-    t('Position'),
-    t('Status'),
-    t('Alphabetical Index'),
-    t('Provides an A-Z index for staff directory page.'),
-  );
+  $handler->display->display_options['inherit_exposed_filters'] = 1;
   $export['profiles'] = $view;
 
   return $export;

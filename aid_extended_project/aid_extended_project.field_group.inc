@@ -20,7 +20,7 @@ function aid_extended_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Administrative Metadata',
-    'weight' => '11',
+    'weight' => '10',
     'children' => array(
       0 => 'field_project_number',
       1 => 'field_project_type',
@@ -49,7 +49,7 @@ function aid_extended_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Associated Content',
-    'weight' => '10',
+    'weight' => '9',
     'children' => array(
       0 => 'field_project_media_assets',
       1 => 'field_project_publications',
@@ -78,7 +78,7 @@ function aid_extended_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Classification',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'field_project_data_sources',
       1 => 'field_project_department',
@@ -140,7 +140,7 @@ function aid_extended_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '9',
+    'weight' => '8',
     'children' => array(
       0 => 'field_project_urls',
       1 => 'field_project_website',

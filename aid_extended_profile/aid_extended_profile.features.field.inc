@@ -79,7 +79,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '11',
         ),
       ),
       'entity_type' => 'node',
@@ -179,7 +179,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '10',
         ),
       ),
       'entity_type' => 'node',
@@ -275,7 +275,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'node',
@@ -290,7 +290,7 @@ function aid_extended_profile_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '16',
+        'weight' => '18',
       ),
     ),
   );
@@ -371,7 +371,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '7',
         ),
       ),
       'entity_type' => 'node',
@@ -386,226 +386,7 @@ function aid_extended_profile_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '17',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-profile-field_profile_proj_cur_lead'
-  $fields['node-profile-field_profile_proj_cur_lead'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_profile_proj_cur_lead',
-      'foreign keys' => array(
-        'nid' => array(
-          'columns' => array(
-            'nid' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'nid' => array(
-          0 => 'nid',
-        ),
-      ),
-      'module' => 'node_reference',
-      'settings' => array(
-        'field_permissions' => array(
-          'create' => 0,
-          'edit' => 0,
-          'edit own' => 0,
-          'view' => 0,
-          'view own' => 0,
-        ),
-        'referenceable_types' => array(
-          'biblio' => 0,
-          'book' => 0,
-          'profile' => 0,
-          'project' => 'project',
-          'research_program' => 0,
-          'research_program_section' => 0,
-        ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
-        ),
-      ),
-      'translatable' => '1',
-      'type' => 'node_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'node_reference',
-          'settings' => array(),
-          'type' => 'node_reference_default',
-          'weight' => '51',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'module' => 'node_reference',
-          'settings' => array(),
-          'type' => 'node_reference_default',
-          'weight' => '51',
-        ),
-        'profile_panel_detail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '48',
-        ),
-        'profile_reference' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '48',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_profile_proj_cur_lead',
-      'label' => 'Director of Current Projects',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'node_reference',
-        'settings' => array(
-          'autocomplete_match' => 'contains',
-          'autocomplete_path' => 'node_reference/autocomplete',
-          'size' => '60',
-        ),
-        'type' => 'node_reference_autocomplete',
-        'weight' => '46',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-profile-field_profile_proj_cur_member'
-  $fields['node-profile-field_profile_proj_cur_member'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_profile_proj_cur_member',
-      'foreign keys' => array(
-        'nid' => array(
-          'columns' => array(
-            'nid' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'nid' => array(
-          0 => 'nid',
-        ),
-      ),
-      'module' => 'node_reference',
-      'settings' => array(
-        'field_permissions' => array(
-          'create' => 0,
-          'edit' => 0,
-          'edit own' => 0,
-          'view' => 0,
-          'view own' => 0,
-        ),
-        'referenceable_types' => array(
-          'biblio' => 0,
-          'book' => 0,
-          'event' => 0,
-          'media_coverage' => 0,
-          'news_item' => 0,
-          'page' => 0,
-          'press_release' => 0,
-          'profile' => 0,
-          'project' => 'project',
-          'research_program' => 0,
-          'research_program_section' => 0,
-        ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
-        ),
-      ),
-      'translatable' => '1',
-      'type' => 'node_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Enter the current projects the person plays a role in as a researcher.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'node_reference',
-          'settings' => array(),
-          'type' => 'node_reference_default',
-          'weight' => '50',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'module' => 'node_reference',
-          'settings' => array(),
-          'type' => 'node_reference_default',
-          'weight' => '50',
-        ),
-        'profile_panel_detail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '47',
-        ),
-        'profile_reference' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '47',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_profile_proj_cur_member',
-      'label' => 'Researcher in Current Projects',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'node_reference',
-        'settings' => array(
-          'autocomplete_match' => 'contains',
-          'autocomplete_path' => 'node_reference/autocomplete',
-          'size' => '60',
-        ),
-        'type' => 'node_reference_autocomplete',
-        'weight' => '45',
+        'weight' => '19',
       ),
     ),
   );
@@ -698,7 +479,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '8',
         ),
       ),
       'entity_type' => 'node',
@@ -717,7 +498,7 @@ function aid_extended_profile_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '47',
+        'weight' => '48',
       ),
     ),
   );
@@ -793,7 +574,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '9',
         ),
       ),
       'entity_type' => 'node',
@@ -897,7 +678,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
       ),
       'entity_type' => 'node',
@@ -993,7 +774,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '16',
         ),
       ),
       'entity_type' => 'node',
@@ -1089,7 +870,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '23',
         ),
       ),
       'entity_type' => 'node',
@@ -1107,7 +888,7 @@ function aid_extended_profile_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '18',
+        'weight' => '20',
       ),
     ),
   );
@@ -1181,10 +962,11 @@ function aid_extended_profile_field_default_fields() {
           'weight' => '1',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'text_default',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -1278,7 +1060,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '24',
         ),
       ),
       'entity_type' => 'node',
@@ -1381,7 +1163,7 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '22',
         ),
       ),
       'entity_type' => 'node',
@@ -1419,11 +1201,9 @@ function aid_extended_profile_field_default_fields() {
   t('Content Related to Profile');
   t('Department of Staff');
   t('Departments or parts of the organization the person belongs to.');
-  t('Director of Current Projects');
   t('Enter links to your social media pages, such as your Facbook profile, your Twitter account,  your LinkedIn profile, or personal website.');
   t('Enter some keywords describing the person or organization.');
   t('Enter the author ID to link this profile explicitly to a certain biblio author. This is useful in cases, where a link via a user account does not exist.');
-  t('Enter the current projects the person plays a role in as a researcher.');
   t('Enter the topics for which the staff member is available as an expert in the case of media inquiries.');
   t('Enter the topics for which the staff member is known to be an expert.');
   t('Expertise of Staff');
@@ -1431,7 +1211,6 @@ function aid_extended_profile_field_default_fields() {
   t('Media Expertise of Staff');
   t('Other Weblinks');
   t('Personal Website');
-  t('Researcher in Current Projects');
   t('Social Media');
   t('Staff Keywords');
   t('Staff Member');

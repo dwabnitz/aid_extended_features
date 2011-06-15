@@ -84,7 +84,7 @@ function aid_extended_project_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );

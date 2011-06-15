@@ -101,13 +101,36 @@ function aid_defaults_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'data_type' => array(
-      'name' => 'Data Type',
-      'machine_name' => 'data_type',
+    'data_types' => array(
+      'name' => 'Data Types',
+      'machine_name' => 'data_types',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '3',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'event_categories' => array(
+      'name' => 'Event Categories',
+      'machine_name' => 'event_categories',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '5',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -147,9 +170,9 @@ function aid_defaults_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'funding_type' => array(
-      'name' => 'Funding Type',
-      'machine_name' => 'funding_type',
+    'funding_types' => array(
+      'name' => 'Funding Types',
+      'machine_name' => 'funding_types',
       'description' => 'Types of funding sources',
       'hierarchy' => '0',
       'module' => 'taxonomy',
@@ -197,9 +220,32 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Geographical Areas',
       'machine_name' => 'geographical_areas',
       'description' => 'Continent, region, country, state, city, administrative units, etc.',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-5',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'news_categories' => array(
+      'name' => 'News Categories',
+      'machine_name' => 'news_categories',
+      'description' => 'Type of news, e.g. staff news, announcement, fellowship, award, etc.',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -220,7 +266,7 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Organizational Structure',
       'machine_name' => 'org_structure',
       'description' => 'Describes an organizational structure or hierarchy, e.g. the structure of a research institute, a department or center.',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-10',
       'rdf_mapping' => array(
@@ -243,7 +289,7 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Research Areas',
       'machine_name' => 'research_areas',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-7',
       'rdf_mapping' => array(
@@ -266,7 +312,7 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Research Fields',
       'machine_name' => 'research_fields',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-8',
       'rdf_mapping' => array(
@@ -337,7 +383,7 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'description' => 'Use tags to group articles on similar topics into categories.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '5',
+      'weight' => '7',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -360,7 +406,7 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'description' => 'A formal taxonomy of research topics, themes, interests or categories.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '4',
+      'weight' => '6',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
