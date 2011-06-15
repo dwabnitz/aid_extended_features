@@ -41,6 +41,8 @@ function aid_extended_biblio_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = 'biblio_year';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: Biblio: Biblio Citation */
   $handler->display->display_options['fields']['citation']['id'] = 'citation';
   $handler->display->display_options['fields']['citation']['table'] = 'biblio';
@@ -62,6 +64,7 @@ function aid_extended_biblio_views_default_views() {
   $handler->display->display_options['fields']['citation']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['citation']['hide_empty'] = 0;
   $handler->display->display_options['fields']['citation']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['citation']['hide_alter_empty'] = 0;
   /* Sort criterion: Biblio: Date Published */
   $handler->display->display_options['sorts']['biblio_date']['id'] = 'biblio_date';
   $handler->display->display_options['sorts']['biblio_date']['table'] = 'biblio';
@@ -158,13 +161,13 @@ function aid_extended_biblio_views_default_views() {
   $handler->display->display_options['filters']['field_biblio_research_areas_tid']['table'] = 'field_data_field_biblio_research_areas';
   $handler->display->display_options['filters']['field_biblio_research_areas_tid']['field'] = 'field_biblio_research_areas_tid';
   $handler->display->display_options['filters']['field_biblio_research_areas_tid']['value'] = array(
+    26 => '26',
     22 => '22',
+    27 => '27',
     23 => '23',
+    28 => '28',
     24 => '24',
     25 => '25',
-    26 => '26',
-    27 => '27',
-    28 => '28',
     29 => '29',
   );
   $handler->display->display_options['filters']['field_biblio_research_areas_tid']['group'] = 0;
