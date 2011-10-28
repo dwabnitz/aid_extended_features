@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_strongarm().
+ * Implements hook_strongarm().
  */
 function aid_defaults_strongarm() {
   $export = array();
@@ -49,7 +49,7 @@ function aid_defaults_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'mzes_prototype';
+  $strongarm->value = 'bartik';
   $export['theme_default'] = $strongarm;
 
   return $export;

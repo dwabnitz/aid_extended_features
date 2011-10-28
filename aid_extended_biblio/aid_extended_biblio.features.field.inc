@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function aid_extended_biblio_field_default_fields() {
   $fields = array();
@@ -364,7 +364,7 @@ function aid_extended_biblio_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'media',
+          'module' => NULL,
           'settings' => array(),
           'type' => 'media_large',
           'weight' => 15,
@@ -381,6 +381,7 @@ function aid_extended_biblio_field_default_fields() {
       'label' => 'Multimedia Assets',
       'required' => 0,
       'settings' => array(
+        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1019,6 +1020,7 @@ function aid_extended_biblio_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1035,7 +1037,7 @@ function aid_extended_biblio_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => 20,
         ),
         'teaser' => array(
@@ -1060,9 +1062,11 @@ function aid_extended_biblio_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
@@ -1103,6 +1107,7 @@ function aid_extended_biblio_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1119,7 +1124,7 @@ function aid_extended_biblio_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => 18,
         ),
         'teaser' => array(
@@ -1144,9 +1149,11 @@ function aid_extended_biblio_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
@@ -1187,6 +1194,7 @@ function aid_extended_biblio_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1203,7 +1211,7 @@ function aid_extended_biblio_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => 19,
         ),
         'teaser' => array(
@@ -1228,9 +1236,11 @@ function aid_extended_biblio_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
