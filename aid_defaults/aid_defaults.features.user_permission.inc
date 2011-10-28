@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implementation of hook_user_default_permissions().
  */
 function aid_defaults_user_default_permissions() {
   $permissions = array();

@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_filter_default_formats().
+ * Implementation of hook_filter_default_formats().
  */
 function aid_defaults_filter_default_formats() {
   $formats = array();

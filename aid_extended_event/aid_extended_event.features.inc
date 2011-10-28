@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_ctools_plugin_api().
+ * Implementation of hook_ctools_plugin_api().
  */
 function aid_extended_event_ctools_plugin_api() {
   list($module, $api) = func_get_args();

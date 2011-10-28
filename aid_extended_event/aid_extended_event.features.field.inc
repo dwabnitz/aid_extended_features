@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_field_default_fields().
+ * Implementation of hook_field_default_fields().
  */
 function aid_extended_event_field_default_fields() {
   $fields = array();
@@ -196,7 +196,7 @@ function aid_extended_event_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => NULL,
+          'module' => 'media',
           'settings' => array(),
           'type' => 'media_large',
           'weight' => 7,
@@ -213,7 +213,6 @@ function aid_extended_event_field_default_fields() {
       'label' => 'Multimedia Assets',
       'required' => 0,
       'settings' => array(
-        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
         'user_register_form' => FALSE,
       ),
       'widget' => array(

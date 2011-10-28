@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_user_default_roles().
+ * Implementation of hook_user_default_roles().
  */
 function aid_defaults_user_default_roles() {
   $roles = array();

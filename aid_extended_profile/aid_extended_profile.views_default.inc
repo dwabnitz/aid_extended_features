@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_views_default_views().
+ * Implementation of hook_views_default_views().
  */
 function aid_extended_profile_views_default_views() {
   $export = array();
@@ -17,7 +17,7 @@ function aid_extended_profile_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Profiles';
   $view->core = 7;
-  $view->api_version = '3.0';
+  $view->api_version = '3.0-alpha1';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -329,7 +329,7 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['field_profile_department_tid']['vocabulary'] = 'org_structure';
   $handler->display->display_options['filters']['field_profile_department_tid']['hierarchy'] = 1;
   $handler->display->display_options['filters']['field_profile_department_tid']['error_message'] = 1;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Content: Position (field_profile_staff_position) */
   $handler->display->display_options['filters']['field_profile_staff_position_value']['id'] = 'field_profile_staff_position_value';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['table'] = 'field_data_field_profile_staff_position';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['field'] = 'field_profile_staff_position_value';
@@ -356,6 +356,7 @@ function aid_extended_profile_views_default_views() {
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['operator'] = 'field_profile_staff_position_value_op';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['identifier'] = 'field_profile_staff_position_value';
   $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['remember'] = 1;
+  $handler->display->display_options['filters']['field_profile_staff_position_value']['expose']['reduce'] = 1;
   /* Filter criterion: Content: Expertise of Staff (field_profile_expertise) */
   $handler->display->display_options['filters']['field_profile_expertise_tid']['id'] = 'field_profile_expertise_tid';
   $handler->display->display_options['filters']['field_profile_expertise_tid']['table'] = 'field_data_field_profile_expertise';
