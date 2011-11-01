@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the AID Extended Biblio feature.
+ * Code for the AID Extended Event feature.
  */
 
 include_once('aid_extended_event.features.inc');
