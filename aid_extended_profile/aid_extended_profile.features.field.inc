@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function aid_extended_profile_field_default_fields() {
   $fields = array();
@@ -532,6 +532,7 @@ function aid_extended_profile_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -548,14 +549,14 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '26',
         ),
         'full' => array(
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '26',
         ),
         'profile_panel_detail' => array(
@@ -592,9 +593,11 @@ function aid_extended_profile_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
@@ -1018,6 +1021,7 @@ function aid_extended_profile_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1034,14 +1038,14 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '49',
         ),
         'full' => array(
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '49',
         ),
         'profile_panel_detail' => array(
@@ -1078,9 +1082,11 @@ function aid_extended_profile_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
@@ -1121,6 +1127,7 @@ function aid_extended_profile_field_default_fields() {
           'view own' => 0,
         ),
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1137,14 +1144,14 @@ function aid_extended_profile_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '8',
         ),
         'full' => array(
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '8',
         ),
         'profile_panel_detail' => array(
@@ -1181,9 +1188,11 @@ function aid_extended_profile_field_default_fields() {
         ),
         'enable_tokens' => 0,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,

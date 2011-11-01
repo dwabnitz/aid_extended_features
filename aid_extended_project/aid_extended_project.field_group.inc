@@ -5,12 +5,13 @@
  */
 
 /**
- * Implementation of hook_field_group_info().
+ * Implements hook_field_group_info().
  */
 function aid_extended_project_field_group_info() {
   $export = array();
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_project_admin_meta|node|project|form';
   $field_group->group_name = 'group_project_admin_meta';
@@ -40,6 +41,7 @@ function aid_extended_project_field_group_info() {
   $export['group_project_admin_meta|node|project|form'] = $field_group;
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_project_associated_content|node|project|form';
   $field_group->group_name = 'group_project_associated_content';
@@ -69,6 +71,7 @@ function aid_extended_project_field_group_info() {
   $export['group_project_associated_content|node|project|form'] = $field_group;
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_project_classification|node|project|form';
   $field_group->group_name = 'group_project_classification';
@@ -101,6 +104,7 @@ function aid_extended_project_field_group_info() {
   $export['group_project_classification|node|project|form'] = $field_group;
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_project_collaborators|node|project|form';
   $field_group->group_name = 'group_project_collaborators';
@@ -131,6 +135,7 @@ function aid_extended_project_field_group_info() {
   $export['group_project_collaborators|node|project|form'] = $field_group;
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_project_links|node|project|form';
   $field_group->group_name = 'group_project_links';

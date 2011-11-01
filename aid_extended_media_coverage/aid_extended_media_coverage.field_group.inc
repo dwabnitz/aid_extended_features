@@ -5,12 +5,13 @@
  */
 
 /**
- * Implementation of hook_field_group_info().
+ * Implements hook_field_group_info().
  */
 function aid_extended_media_coverage_field_group_info() {
   $export = array();
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_media_coverage_associated|node|media_coverage|form';
   $field_group->group_name = 'group_media_coverage_associated';
@@ -40,6 +41,7 @@ function aid_extended_media_coverage_field_group_info() {
   $export['group_media_coverage_associated|node|media_coverage|form'] = $field_group;
 
   $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_media_coverage_classific|node|media_coverage|form';
   $field_group->group_name = 'group_media_coverage_classific';
