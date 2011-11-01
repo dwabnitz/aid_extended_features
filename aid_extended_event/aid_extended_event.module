@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * Code for the AID Extended Biblio feature.
  */
 
-// Drupal needs this blank file.
+include_once('aid_extended_event.features.inc');
