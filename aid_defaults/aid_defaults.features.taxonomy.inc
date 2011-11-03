@@ -16,6 +16,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-2',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -39,6 +41,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-1',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -62,6 +66,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -85,6 +91,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '1',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -108,6 +116,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '3',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -131,6 +141,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '5',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -154,6 +166,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-4',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -177,6 +191,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-3',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -200,6 +216,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '2',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -220,9 +238,11 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Geographical Areas',
       'machine_name' => 'geographical_areas',
       'description' => 'Continent, region, country, state, city, administrative units, etc.',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-5',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -246,6 +266,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '4',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -266,9 +288,11 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Organizational Structure',
       'machine_name' => 'org_structure',
       'description' => 'Describes an organizational structure or hierarchy, e.g. the structure of a research institute, a department or center.',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-10',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -289,9 +313,11 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Research Areas',
       'machine_name' => 'research_areas',
       'description' => '',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-7',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -312,9 +338,11 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'name' => 'Research Fields',
       'machine_name' => 'research_fields',
       'description' => '',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-8',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -338,6 +366,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-6',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -361,6 +391,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-9',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -384,6 +416,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '7',
+      'language' => 'und',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -407,6 +441,8 @@ function aid_defaults_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '6',
+      'language' => 'und',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
