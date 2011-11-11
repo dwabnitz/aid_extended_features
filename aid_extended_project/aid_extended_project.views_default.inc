@@ -205,6 +205,25 @@ function aid_extended_project_views_default_views() {
   $handler->display->display_options['path'] = 'projects-list';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+  $translatables['projects'] = array(
+    t('Master'),
+    t('Projects'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('Status'),
+    t('Department'),
+    t('Geogr. Areas'),
+    t('Research Areas'),
+    t('Topics'),
+    t('Displays a list of projects grouped by research area.'),
+  );
   $export['projects'] = $view;
 
   return $export;

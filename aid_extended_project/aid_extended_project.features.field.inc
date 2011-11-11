@@ -1554,7 +1554,7 @@ function aid_extended_project_field_default_fields() {
       ),
     ),
   );
-
+  
   // Translatables
   // Included for use with string extractors like potx.
   t('Current Directors');
@@ -1564,6 +1564,7 @@ function aid_extended_project_field_default_fields() {
   t('Department');
   t('Funding');
   t('Geographical Areas');
+  t('ID');
   t('Multimedia Assets');
   t('Other Related Content');
   t('Other Weblinks');
