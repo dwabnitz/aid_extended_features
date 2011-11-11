@@ -593,7 +593,7 @@ function aid_extended_project_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '7',
+        'weight' => '12',
       ),
     ),
   );
@@ -766,7 +766,7 @@ function aid_extended_project_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '5',
+        'weight' => '10',
       ),
     ),
   );
@@ -859,7 +859,7 @@ function aid_extended_project_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '6',
+        'weight' => '11',
       ),
     ),
   );
@@ -1554,7 +1554,7 @@ function aid_extended_project_field_default_fields() {
       ),
     ),
   );
-  
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Current Directors');
@@ -1564,7 +1564,6 @@ function aid_extended_project_field_default_fields() {
   t('Department');
   t('Funding');
   t('Geographical Areas');
-  t('ID');
   t('Multimedia Assets');
   t('Other Related Content');
   t('Other Weblinks');
